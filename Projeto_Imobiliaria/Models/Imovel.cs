@@ -40,6 +40,5 @@ namespace Projeto_Imobiliaria.Models
         [Display(Name = "Valor Caução")]
         public float Valor_Caucao { get; set; }
 
-
     }
 }
