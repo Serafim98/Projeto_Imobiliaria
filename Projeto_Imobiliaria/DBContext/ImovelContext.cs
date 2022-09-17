@@ -5,7 +5,7 @@ namespace Projeto_Imobiliaria.DBContext
 {
     public class ImovelContext : DbContext
     {
-        public ImovelContext(DbContextOptions<ImovelContext> options): base(options)
+        public ImovelContext(DbContextOptions<ImovelContext> options) : base(options)
         {
 
         }

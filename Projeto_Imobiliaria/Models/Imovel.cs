@@ -1,5 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace Projeto_Imobiliaria.Models
 {
@@ -39,6 +39,5 @@ namespace Projeto_Imobiliaria.Models
         [Column("ValorCaucao")]
         [Display(Name = "Valor Caução")]
         public float Valor_Caucao { get; set; }
-
     }
 }

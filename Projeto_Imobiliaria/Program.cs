@@ -5,10 +5,16 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<ClienteContext>
-    (options => options.UseSqlServer("Data Source=DESKTOP-9TUKIQ6;Initial Catalog=Imobiliaria;Integrated Security=True"));
+/*builder.Services.AddDbContext<ClienteContext>
+    (options => options.UseSqlServer("Data Source=coredbserverimobiliariaperseverare.database.windows.net,1433;Initial Catalog=Imobiliaria;User ID=AdminImob;Password=40028922Play"));
 builder.Services.AddDbContext<ImovelContext>
-    (options => options.UseSqlServer("Data Source=DESKTOP-9TUKIQ6;Initial Catalog=Imobiliaria;Integrated Security=True"));
+    (options => options.UseSqlServer("Data Source=coredbserverimobiliariaperseverare.database.windows.net,1433;Initial Catalog=Imobiliaria;User ID=AdminImob;Password=40028922Play"));
+*/
+
+builder.Services.AddDbContext<ClienteContext>
+    (options => options.UseSqlServer("Data Source=COLABORADOR-02;Initial Catalog=Imobiliaria;Integrated Security=True"));
+builder.Services.AddDbContext<ImovelContext>
+    (options => options.UseSqlServer("Data Source=COLABORADOR-02;Initial Catalog=Imobiliaria;Integrated Security=True"));
 
 var app = builder.Build();
 

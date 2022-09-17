@@ -4,7 +4,7 @@
 
 namespace Projeto_Imobiliaria.Migrations.Imovel
 {
-    public partial class criacaoImovel : Migration
+    public partial class createImovel : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

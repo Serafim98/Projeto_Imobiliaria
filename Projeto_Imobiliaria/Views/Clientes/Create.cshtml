@@ -19,29 +19,46 @@
             </div>
             <div class="form-group">
                 <label asp-for="CPF" class="control-label"></label>
-                <input asp-for="CPF" class="form-control" />
+                <input asp-for="CPF" class="form-control" placeholder="555.555.555-55"/>
                 <span asp-validation-for="CPF" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Telefone" class="control-label"></label>
                 <input asp-for="Telefone" class="form-control" />
-                <span asp-validation-for="Telefone" class="text-danger"></span>
+                <span asp-validation-for="Telefone" class="text-danger" placeholder="55-55555-5555"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Email" class="control-label"></label>
                 <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
+                <span asp-validation-for="Email" class="text-danger" placeholder="usuario@email.com"></span>
+            </div>    
+            
             <div class="form-group">
                 <label asp-for="Estado_Civil" class="control-label"></label>
-                <input asp-for="Estado_Civil" class="form-control" />
+                <select asp-for="Estado_Civil" class="form-control">
+                    <option value="solteiro">Solteiro</option>
+                    <option value="casado">Casado</option>
+                    <option value="divorciado">Divorciado</option>
+                </select>
                 <span asp-validation-for="Estado_Civil" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="Ocupacao" class="control-label"></label>
-                <input asp-for="Ocupacao" class="form-control" />
+                <select asp-for="Ocupacao" class="form-control">
+                    <option value="desempregado">Desempregado</option>
+                    <option value="empregado">Empregado</option>
+                    <option value="autonomo">Autônomo</option>
+                    <option value="empresario">Empresário</option>
+                    <option value="estudante">Estudante</option>
+                    <option value="aposentado">Aposentado</option>
+                    <option value="funcionario publico">Funcionário Público</option>
+                    <option value="estagiário">Estagiário</option>
+                    <option value="trabalho informal">Trabalho Informal</option>
+                </select>
                 <span asp-validation-for="Ocupacao" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

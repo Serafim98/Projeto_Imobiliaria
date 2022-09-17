@@ -11,8 +11,8 @@ using Projeto_Imobiliaria.DBContext;
 namespace Projeto_Imobiliaria.Migrations.Imovel
 {
     [DbContext(typeof(ImovelContext))]
-    [Migration("20220916162126_criacaoImovel")]
-    partial class criacaoImovel
+    [Migration("20220917181339_createImovel")]
+    partial class createImovel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
