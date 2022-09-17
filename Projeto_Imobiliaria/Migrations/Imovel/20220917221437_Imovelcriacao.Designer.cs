@@ -11,8 +11,8 @@ using Projeto_Imobiliaria.DBContext;
 namespace Projeto_Imobiliaria.Migrations.Imovel
 {
     [DbContext(typeof(ImovelContext))]
-    [Migration("20220917181339_createImovel")]
-    partial class createImovel
+    [Migration("20220917221437_Imovelcriacao")]
+    partial class Imovelcriacao
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -31,6 +31,11 @@ namespace Projeto_Imobiliaria.Migrations.Imovel
                         .HasColumnName("Id");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
+
+                    b.Property<string>("Bairro")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Bairro");
 
                     b.Property<string>("CEP")
                         .IsRequired()
@@ -52,8 +57,9 @@ namespace Projeto_Imobiliaria.Migrations.Imovel
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("Logradouro");
 
-                    b.Property<int>("Numero")
-                        .HasColumnType("int")
+                    b.Property<string>("Numero")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
                         .HasColumnName("Numero");
 
                     b.Property<float>("Valor_Caucao")

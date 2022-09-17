@@ -30,6 +30,11 @@ namespace Projeto_Imobiliaria.Migrations.Imovel
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
+                    b.Property<string>("Bairro")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Bairro");
+
                     b.Property<string>("CEP")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)")
@@ -50,8 +55,9 @@ namespace Projeto_Imobiliaria.Migrations.Imovel
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("Logradouro");
 
-                    b.Property<int>("Numero")
-                        .HasColumnType("int")
+                    b.Property<string>("Numero")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
                         .HasColumnName("Numero");
 
                     b.Property<float>("Valor_Caucao")

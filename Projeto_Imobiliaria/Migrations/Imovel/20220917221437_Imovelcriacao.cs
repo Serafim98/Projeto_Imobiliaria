@@ -4,7 +4,7 @@
 
 namespace Projeto_Imobiliaria.Migrations.Imovel
 {
-    public partial class createImovel : Migration
+    public partial class Imovelcriacao : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -16,7 +16,8 @@ namespace Projeto_Imobiliaria.Migrations.Imovel
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CEP = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Logradouro = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Numero = table.Column<int>(type: "int", nullable: false),
+                    Numero = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Bairro = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Cidade = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Estado = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ValorMensal = table.Column<float>(type: "real", nullable: false),

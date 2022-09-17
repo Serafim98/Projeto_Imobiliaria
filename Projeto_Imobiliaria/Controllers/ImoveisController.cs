@@ -54,7 +54,7 @@ namespace Projeto_Imobiliaria.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,CEP,Logradouro,Numero,Cidade,Estado,Valor_Mensal,Valor_Caucao")] Imovel imovel)
+        public async Task<IActionResult> Create([Bind("ID,CEP,Logradouro,Numero,Bairro,Cidade,Estado,Valor_Mensal,Valor_Caucao")] Imovel imovel)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace Projeto_Imobiliaria.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,CEP,Logradouro,Numero,Cidade,Estado,Valor_Mensal,Valor_Caucao")] Imovel imovel)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,CEP,Logradouro,Numero,Bairro,Cidade,Estado,Valor_Mensal,Valor_Caucao")] Imovel imovel)
         {
             if (id != imovel.ID)
             {

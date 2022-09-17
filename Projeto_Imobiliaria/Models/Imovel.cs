@@ -22,7 +22,11 @@ namespace Projeto_Imobiliaria.Models
 
         [Column("Numero")]
         [Display(Name = "Número")]
-        public int Numero { get; set; }
+        public string Numero { get; set; }
+
+        [Column("Bairro")]
+        [Display(Name = "Bairro")]
+        public string Bairro { get; set; }
 
         [Column("Cidade")]
         [Display(Name = "Cidade")]
