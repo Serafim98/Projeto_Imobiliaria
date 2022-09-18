@@ -20,8 +20,8 @@ namespace Projeto_Imobiliaria.Migrations.Imovel
                     Bairro = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Cidade = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Estado = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ValorAlguel = table.Column<float>(type: "real", nullable: false),
-                    ValorCaucao = table.Column<float>(type: "real", nullable: false)
+                    ValorAlguel = table.Column<decimal>(type: "decimal(5,2)", nullable: false),
+                    ValorCaucao = table.Column<decimal>(type: "decimal(5,2)", nullable: false)
                 },
                 constraints: table =>
                 {

@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "Create";
 }
-<script src="~/js/CEP.js"></script>
+    <script src="~/js/CEP.js"></script>
 <h1>Cadastro de Imovel</h1>
 <hr />
 <div class="row">
@@ -63,4 +63,5 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="@Url.Content("~/js/jquery.validade.pt-Br.js")"></script>
 }
