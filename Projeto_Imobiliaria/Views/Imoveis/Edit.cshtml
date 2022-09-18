@@ -3,10 +3,8 @@
 @{
     ViewData["Title"] = "Edit";
 }
-
-<h1>Edit</h1>
-
-<h4>Imovel</h4>
+<script src="~/js/CEP.js"></script>
+<h1>Alterar Imóvel</h1>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -15,12 +13,12 @@
             <input type="hidden" asp-for="ID" />
             <div class="form-group">
                 <label asp-for="CEP" class="control-label"></label>
-                <input asp-for="CEP" class="form-control" />
+                <input asp-for="CEP" id="CEP" class="form-control" />
                 <span asp-validation-for="CEP" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Logradouro" class="control-label"></label>
-                <input asp-for="Logradouro" class="form-control" />
+                <input asp-for="Logradouro" id="logradouro" class="form-control" />
                 <span asp-validation-for="Logradouro" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -30,38 +28,38 @@
             </div>
             <div class="form-group">
                 <label asp-for="Bairro" class="control-label"></label>
-                <input asp-for="Bairro" class="form-control" />
+                <input asp-for="Bairro" id="bairro" class="form-control" />
                 <span asp-validation-for="Bairro" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Cidade" class="control-label"></label>
-                <input asp-for="Cidade" class="form-control" />
+                <input asp-for="Cidade" id="cidade" class="form-control" />
                 <span asp-validation-for="Cidade" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Estado" class="control-label"></label>
-                <input asp-for="Estado" class="form-control" />
+                <input asp-for="Estado" id="estado" class="form-control" />
                 <span asp-validation-for="Estado" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Valor_Mensal" class="control-label"></label>
-                <input asp-for="Valor_Mensal" class="form-control" />
-                <span asp-validation-for="Valor_Mensal" class="text-danger"></span>
+                <label asp-for="PrecoVenda" class="control-label"></label>
+                <input asp-for="PrecoVenda" class="form-control" />
+                <span asp-validation-for="PrecoVenda" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Valor_Caucao" class="control-label"></label>
-                <input asp-for="Valor_Caucao" class="form-control" />
-                <span asp-validation-for="Valor_Caucao" class="text-danger"></span>
+                <label asp-for="PrecoCaucao" class="control-label"></label>
+                <input asp-for="PrecoCaucao" class="form-control" />
+                <span asp-validation-for="PrecoCaucao" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Salvar" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a class="btn btn-secondary" asp-action="Index">Voltar a listagem</a>
 </div>
 
 @section Scripts {

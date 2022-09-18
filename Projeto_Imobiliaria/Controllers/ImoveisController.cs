@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -54,7 +55,7 @@ namespace Projeto_Imobiliaria.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,CEP,Logradouro,Numero,Bairro,Cidade,Estado,Valor_Mensal,Valor_Caucao")] Imovel imovel)
+        public async Task<IActionResult> Create([Bind("ID,CEP,Logradouro,Numero,Bairro,Cidade,Estado,PrecoVenda,PrecoCaucao")] Imovel imovel)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +87,7 @@ namespace Projeto_Imobiliaria.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,CEP,Logradouro,Numero,Bairro,Cidade,Estado,Valor_Mensal,Valor_Caucao")] Imovel imovel)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,CEP,Logradouro,Numero,Bairro,Cidade,Estado,PrecoVenda,PrecoCaucao")] Imovel imovel)
         {
             if (id != imovel.ID)
             {

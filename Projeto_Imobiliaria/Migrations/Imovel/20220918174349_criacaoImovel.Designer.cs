@@ -11,8 +11,8 @@ using Projeto_Imobiliaria.DBContext;
 namespace Projeto_Imobiliaria.Migrations.Imovel
 {
     [DbContext(typeof(ImovelContext))]
-    [Migration("20220917221437_Imovelcriacao")]
-    partial class Imovelcriacao
+    [Migration("20220918174349_criacaoImovel")]
+    partial class criacaoImovel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -62,13 +62,13 @@ namespace Projeto_Imobiliaria.Migrations.Imovel
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("Numero");
 
-                    b.Property<float>("Valor_Caucao")
+                    b.Property<float>("PrecoCaucao")
                         .HasColumnType("real")
                         .HasColumnName("ValorCaucao");
 
-                    b.Property<float>("Valor_Mensal")
+                    b.Property<float>("PrecoVenda")
                         .HasColumnType("real")
-                        .HasColumnName("ValorMensal");
+                        .HasColumnName("ValorAlguel");
 
                     b.HasKey("ID");
 

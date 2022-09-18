@@ -4,7 +4,7 @@
 
 namespace Projeto_Imobiliaria.Migrations.Imovel
 {
-    public partial class Imovelcriacao : Migration
+    public partial class criacaoImovel : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -20,7 +20,7 @@ namespace Projeto_Imobiliaria.Migrations.Imovel
                     Bairro = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Cidade = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Estado = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ValorMensal = table.Column<float>(type: "real", nullable: false),
+                    ValorAlguel = table.Column<float>(type: "real", nullable: false),
                     ValorCaucao = table.Column<float>(type: "real", nullable: false)
                 },
                 constraints: table =>

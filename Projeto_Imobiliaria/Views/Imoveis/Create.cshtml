@@ -3,40 +3,8 @@
 @{
     ViewData["Title"] = "Create";
 }
-<script type="text/javascript">
-    function preencheDados(conteudo) {
-        if (!("erro" in conteudo)) {
-            document.getElementById('logradouro').value=(conteudo.logradouro);
-            document.getElementById('bairro').value=(conteudo.bairro);
-            document.getElementById('cidade').value=(conteudo.localidade);
-            document.getElementById('estado').value=(conteudo.uf);
-        }
-        else {
-            limpa_formulário_cep();
-            alert("CEP não encontrado.");
-        }
-    }
-
-
-    function pesquisacep(valor) {
-        var cep = valor.replace(/\D/g, '');
-        if (cep != "") {
-            var validacep = /^[0-9]{8}$/;
-            if (validacep.test(cep)) {
-                var script = document.createElement('script');
-                script.src = 'https://viacep.com.br/ws/' + cep + '/json/?callback=preencheDados';
-                document.body.appendChild(script);
-            } 
-            else {
-                alert("Formato de CEP inválido.");
-            }
-        } 
-    };
-
-</script>
-<h1>Create</h1>
-
-<h4>Imovel</h4>
+<script src="~/js/CEP.js"></script>
+<h1>Cadastro de Imovel</h1>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -44,7 +12,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="CEP" class="control-label"></label>
-                <input asp-for="CEP" id="CEP" class="form-control" onblur="pesquisacep(this.value);" />
+                <input asp-for="CEP" id="CEP" class="form-control" onblur="pesquisacep(this.value)" placeholder="55555-555"/>
                 <span asp-validation-for="CEP" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -73,14 +41,14 @@
                 <span asp-validation-for="Estado" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Valor_Mensal" class="control-label"></label>
-                <input asp-for="Valor_Mensal" class="form-control" />
-                <span asp-validation-for="Valor_Mensal" class="text-danger"></span>
+                <label asp-for="PrecoVenda" class="control-label"></label>
+                <input asp-for="PrecoVenda" class="form-control" placeholder="800"/>
+                <span asp-validation-for="PrecoVenda" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Valor_Caucao" class="control-label"></label>
-                <input asp-for="Valor_Caucao" class="form-control" />
-                <span asp-validation-for="Valor_Caucao" class="text-danger"></span>
+                <label asp-for="PrecoCaucao" class="control-label"></label>
+                <input asp-for="PrecoCaucao" class="form-control" placeholder="800" />
+                <span asp-validation-for="PrecoCaucao" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
@@ -90,7 +58,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a class="btn btn-secondary" asp-action="Index">Voltar a listagem</a>
 </div>
 
 @section Scripts {

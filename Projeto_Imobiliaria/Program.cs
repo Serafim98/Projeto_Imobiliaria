@@ -12,9 +12,9 @@ builder.Services.AddDbContext<ImovelContext>
 */
 
 builder.Services.AddDbContext<ClienteContext>
-    (options => options.UseSqlServer("Data Source=COLABORADOR-02;Initial Catalog=Imobiliaria;Integrated Security=True"));
+    (options => options.UseSqlServer("Data Source=DESKTOP-9TUKIQ6;Initial Catalog=Imobiliaria;Integrated Security=True"));
 builder.Services.AddDbContext<ImovelContext>
-    (options => options.UseSqlServer("Data Source=COLABORADOR-02;Initial Catalog=Imobiliaria;Integrated Security=True"));
+    (options => options.UseSqlServer("Data Source=DESKTOP-9TUKIQ6;Initial Catalog=Imobiliaria;Integrated Security=True"));
 
 var app = builder.Build();
 

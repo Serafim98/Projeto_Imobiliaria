@@ -36,12 +36,18 @@ namespace Projeto_Imobiliaria.Models
         [Display(Name = "Estado")]
         public string Estado { get; set; }
 
-        [Column("ValorMensal")]
-        [Display(Name = "Valor Mensal")]
-        public float Valor_Mensal { get; set; }
+        [Column("ValorAlguel")]
+        [Range(10, 99999.99,
+             ErrorMessage = "O Preço do aluguel deve estar entre " +
+                            "10,00 e 99999,99.")]
+        [Display(Name = "Valor do Aluguel")]
+        public float PrecoVenda { get; set; }
 
         [Column("ValorCaucao")]
-        [Display(Name = "Valor Caução")]
-        public float Valor_Caucao { get; set; }
+        [Range(10, 99999.99,
+             ErrorMessage = "O Preço da caução deve estar entre " +
+                            "10,00 e 99999,99.")]
+        [Display(Name = "Valor da Caução")]
+        public float PrecoCaucao { get; set; }
     }
 }

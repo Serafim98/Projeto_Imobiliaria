@@ -60,13 +60,13 @@ namespace Projeto_Imobiliaria.Migrations.Imovel
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("Numero");
 
-                    b.Property<float>("Valor_Caucao")
+                    b.Property<float>("PrecoCaucao")
                         .HasColumnType("real")
                         .HasColumnName("ValorCaucao");
 
-                    b.Property<float>("Valor_Mensal")
+                    b.Property<float>("PrecoVenda")
                         .HasColumnType("real")
-                        .HasColumnName("ValorMensal");
+                        .HasColumnName("ValorAlguel");
 
                     b.HasKey("ID");
 
